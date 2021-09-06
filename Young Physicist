@@ -39,7 +39,7 @@ if(xcomp==0&&ycomp==0&&zcomp==0){
 } else{
     cout<<"no"<<endl;
 }
-return 0;
+ return 0;
 }
 
 
