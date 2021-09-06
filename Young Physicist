@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+#include <array>
+
+using namespace std;
+
+int main() {
+    int n,i,j,k,l,xcomp,ycomp,zcomp;
+      cin>>n;
+    int x[n],y[n],z[n],sumx[n],sumy[n],sumz[n];
+ 
+   for(i=0;i<=n-1;i++){
+      cin>>x[i];
+      cin>>y[i];
+      cin>>z[i];
+   
+   } sumx[0]=x[0];
+    for(j=1;j<n;j++){
+   
+   sumx[j]=sumx[j-1]+x[j];
+    }
+xcomp=sumx[n-1];
+   
+sumy[0]=y[0];
+    for(k=1;k<n;k++){
+
+   sumy[k]=sumy[k-1]+y[k];
+    }
+ycomp=sumy[n-1];
+
+ sumz[0]=z[0];
+    for(l=1;l<n;l++){
+  
+   sumz[l]=sumz[l-1]+z[l];
+    }
+zcomp=sumz[n-1];
+if(xcomp==0&&ycomp==0&&zcomp==0){
+    cout<<"yes"<<endl;
+} else{
+    cout<<"no"<<endl;
+}
+return 0;
+}
+
+
